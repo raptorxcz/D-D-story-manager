@@ -39,6 +39,13 @@ class AlorieWeb extends Web {
       } else {
         return new IndexPage();
       }
+      
+    case 'event':
+      if (count($components) >= 2) {
+        return new EventPage((int)$components[1]);
+      } else {
+        return new IndexPage();
+      }
     
     case 'login':
       return new LoginPage();

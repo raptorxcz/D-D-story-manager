@@ -9,7 +9,11 @@ function myExceptionHandler($error)
 set_exception_handler('myExceptionHandler');
 
 function p($x) {
-  $data = print_r($x, true);
+  if (is_array($x)) {
+    $data = print_r($x, true);
+  } else {
+    $data = var_dump($x);
+  }
   echo '<pre>'.$data.'</pre>';
 }
 ?>

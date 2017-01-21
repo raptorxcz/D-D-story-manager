@@ -3,7 +3,7 @@ class LinkView extends View {
   
   public $content;
   public $url;
-  public $isLinkOpenedInNewWindow = true;
+  public $isLinkOpenedInNewWindow = false;
   
   function __toString() {
     $a = new ElementView('a');
