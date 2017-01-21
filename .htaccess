@@ -1,0 +1,36 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} !/images/.*
+RewriteCond %{REQUEST_URI} !/fonts/.*
+RewriteCond %{REQUEST_URI} !/export.php
+RewriteCond %{REQUEST_URI} !/style.css
+
+RewriteRule ^(((?!index\.php).)*)$ index\.php?q=$1     [L,NE,QSA]
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault A18000
+
+  ExpiresByType image/gif A2592000
+  ExpiresByType image/jpg "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png A2592000
+
+  ExpiresByType text/css A259200
+  ExpiresByType text/javascript A259200
+  ExpiresByType text/html A15
+
+  ExpiresByType application/x-javascript A2600000
+</IfModule>
+
+<ifModule mod_deflate.c>
+  <filesMatch "\.(css|js|x?html?|php)$">
+    SetOutputFilter DEFLATE
+  </filesMatch>
+</ifModule>
+
+# php_value session.save_path "/home/free/own.cz/e/epica-test/root/www/tmp"
+# php_flag file_uploads On
+# php_value memory_limit 10M
+# php_value post_max_size 10M
+# php_value upload_max_filesize 10M

@@ -1,0 +1,135 @@
+@font-face {
+  font-family: 'n';
+  src: url('fonts/LibreBaskerville-Regular.ttf');
+}
+@font-face {
+  font-family: 'nb';
+  src: url('fonts/LibreBaskerville-Bold.ttf');
+}
+@font-face {
+  font-family: 'ni';
+  src: url('fonts/LibreBaskerville-Italic.ttf');
+}
+@font-face {
+  font-family: 's';
+  src: url('fonts/NotoSans-Regular.ttf');
+}
+@font-face {
+    font-family: "sb";
+    src: url("fonts/NotoSans-Bold.ttf");
+}
+@font-face {
+    font-family: "si";
+    src: url("fonts/NotoSans-Italic.ttf");
+}
+@font-face {
+    font-family: "sib";
+    src: url("fonts/NotoSans-BoldItalic.ttf");
+}
+
+body {
+  font-family: "Baskerville", sans-serif;
+  color: #58170D;
+  margin: 0;
+  padding: 0;
+  background: #FFF url(images/grunge3.png) no-repeat scroll top left;
+  background-size: cover;
+}
+
+#content {
+  background: #000 url(images/grunge9.png) no-repeat scroll top left;
+  background-size: cover;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+h1, h2 {
+  font-family: "n", sans-serif;
+  margin-bottom: 0;
+  font-variant: small-caps;
+}
+
+h3 {
+  border-bottom: 1px solid #58170D;
+  font-size: 1.2em;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+  font-family: "s";
+}
+
+.titleDescription {
+  font-family: "si";
+  color: #000;
+  font-size: 1em;
+}
+
+a {
+  color: #00F;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: square;
+}
+
+p, span {
+  color: #000;
+}
+
+strong {
+  color: #58170D;
+  font-size: 1em;
+  font-family: "sb";
+  font-variant: small-caps;
+}
+
+textarea, input {
+  width: 100%;
+}
+
+.separator {
+  width: 100%;
+  height: 6px;
+}
+
+.clear {
+  clear: both;
+}
+
+.map {
+  width: 100%;
+}
+
+.twoColumns .column {
+  float: left;
+  margin-left: 5%;
+  width: 47.5%;
+}
+
+.twoColumns .column:first-child {
+  margin-left: 0;
+}
+
+.threeColumns .column {
+  width: 30%;
+  margin-left: 5%;
+  float: left;
+}
+
+.threeColumns .column:first-child {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 480px) {
+    .threeColumns .column {
+      width: 100%;
+      margin: 0;
+    }
+}
